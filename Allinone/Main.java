@@ -1,0 +1,40 @@
+package Allinone;
+class singleinheriPerson {
+    String name;
+    int age;
+
+    void setDetails(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void showDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+
+class Employee extends singleinheriPerson {
+    String company;
+    double salary;
+
+    void setJobDetails(String company, double salary) {
+        this.company = company;
+        this.salary = salary;
+    }
+
+    void showJobDetails() {
+        showDetails();
+        System.out.println("Company: " + company);
+        System.out.println("Salary: " + salary);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee e = new Employee();
+        e.setDetails("Kartik Pohekar", 22);
+        e.setJobDetails("Wipro", 75000);
+        e.showJobDetails();
+    }
+}
