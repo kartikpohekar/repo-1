@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spring Flowers School - Student Management</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f0f8ff;
+}
+
+/* Header section */
+header {
+  background-color: #3a7ca5;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Logo and nav container */
+.navbar {
+  background-color: #e3f2fd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #3a7ca5;
+}
+
+/* Main content */
+main {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+main h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+main p {
+  color: #555;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+button {
+  background-color: #3a7ca5;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #27668f;
+}
+
+/* Profile section */
+#profile {
+  display: none;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 8px;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#profile h3 {
+  color: #3a7ca5;
+  margin-bottom: 10px;
+}
+
+#profile p {
+  font-size: 17px;
+  color: #444;
+  margin: 5px 0;
+}
+</style>
+
+<script>
+function showProfile() {
+  document.getElementById('profile').style.display = 'block';
+}
+</script>
+
+</head>
+<body>
+
+<header>Welcome to Spring Flowers School</header>
+
+<div class="navbar">
+  <img src="school_logo.png" alt="School Logo">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Admissions</a></li>
+    <li><a href="#">Academics</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>
+
+<main>
+  <h2>Student Management System</h2>
+  <p>Manage your school records easily and view student information online.</p>
+  <button onclick="showProfile()">Student Profile</button>
+
+  <div id="profile">
+    <h3>Student Profile</h3>
+    <p><strong>Name:</strong> Kartik Pohekar</p>
+    <p><strong>Class:</strong> 10 - A</p>
+    <p><strong>Roll No:</strong> 23</p>
+    <p><strong>Email:</strong> kartik.pohekar@example.com</p>
+  </div>
+</main>
+
+</body>
+</html>

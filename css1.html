@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kartik Pohekar's Digital Art Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Raleway:ital,wght@1,400&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Raleway", sans-serif;
+      color: #333;
+      background-color: #f2f2f2;
+    }
+
+    /* Elegant Header Section */
+    header {
+      background: linear-gradient(135deg, #4e6072, #7a8fa4);
+      color: #fff;
+      text-align: center;
+      padding: 3.5rem 1rem 3rem 1rem;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    header h1 {
+      font-family: "Cinzel", serif;
+      font-style: italic;
+      font-size: 2rem;
+      margin: 0;
+      letter-spacing: 0.5px;
+      color: #f7f7f7;
+      text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    header p {
+      margin-top: 1rem;
+      font-family: "Raleway", sans-serif;
+      font-size: 1rem;
+      color: #eaeaea;
+      font-style: italic;
+      letter-spacing: 0.4px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Gallery Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Card Styles */
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.05);
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+      padding: 1rem;
+      opacity: 0;
+      transform: translateY(20%);
+      transition: all 0.4s ease;
+    }
+
+    .card:hover .overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .overlay h3 {
+      margin: 0 0 0.3rem;
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    .overlay p {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    footer {
+      background-color: #1d1d1d;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 2.5rem 1rem;
+      }
+      header h1 {
+        font-size: 1.6rem;
+      }
+      header p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kartik Pohekar’s Virtual Museum of Art & Innovation</h1>
+    <p>Experience creativity through a collection of timeless masterpieces and digital imagination.</p>
+  </header>
+
+  <main>
+    <section class="gallery">
+      <div class="card">
+        <img src="ex1.jpeg" alt="Madonna of the Rabbit by Titian">
+        <div class="overlay">
+          <h3>“Madonna of the Rabbit”</h3>
+          <p>Artist: Titian · Year: c.1530</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="ex2.jpeg" alt="Portrait of a Lady by Leonardo da Vinci">
+        <div class="overlay">
+          <h3>“Portrait of a Lady”</h3>
+          <p>Artist: Leonardo da Vinci · Year: c.1490</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="ex3.jpeg" alt="Mona Lisa by Leonardo da Vinci">
+        <div class="overlay">
+          <h3>“Mona Lisa”</h3>
+          <p>Artist: Leonardo da Vinci · Year: 1503–1506</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="ex4.jpeg" alt="Saint Francis Receiving the Stigmata by Giotto">
+        <div class="overlay">
+          <h3>“Saint Francis Receiving the Stigmata”</h3>
+          <p>Artist: Giotto di Bondone · Year: c.1295</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="ex5.jpeg" alt="Portrait of Louis XIV by Hyacinthe Rigaud">
+        <div class="overlay">
+          <h3>“Portrait of Louis XIV”</h3>
+          <p>Artist: Hyacinthe Rigaud · Year: 1701</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="ex6.jpeg" alt="The Card Players by Valentin de Boulogne">
+        <div class="overlay">
+          <h3>“The Card Players”</h3>
+          <p>Artist: Valentin de Boulogne · Year: 1620</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Kartik Pohekar’s Virtual Museum. All rights reserved.</p>
+    <p>Curated with passion and artistry by Kartik Pohekar.</p>
+  </footer>
+
+</body>
+</html>
